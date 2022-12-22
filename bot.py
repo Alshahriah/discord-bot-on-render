@@ -12,5 +12,5 @@ async def on_ready():
         if filename.endswith('.py') and not filename.startswith('_'):
             await bot.load_extension(f'cogs.{filename[:-3]}')
             extensions.append(filename[:-3])
-    bot.load_extension('jishaku')
+    await bot.load_extension('jishaku')
     print("Loaded extensions: " + ", ".join(extensions))
