@@ -13,7 +13,8 @@ async def my_function():
 @app.on_event("startup")
 async def startup():
     loop = asyncio.get_event_loop()
-    loop.create_task(my_function())
+    # run the function only once
+    loop.run_until_complete(my_function())
 
 @app.get("/")
 def home():
