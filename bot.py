@@ -7,6 +7,7 @@ load_dotenv()
 
 bot = commands.Bot(command_prefix='!', description='A bot that does stuff.', intents=discord.Intents.all())
 token = os.getenv('DISCORD_TOKEN')
+has_run = bool
 
 @bot.event
 async def on_ready():
