@@ -16,5 +16,7 @@ async def on_ready():
             await bot.load_extension(f'cogs.{filename[:-3]}')
     await bot.load_extension('jishaku')
 
-keep_alive()
-bot.run(token)
+if has_run == False:
+    keep_alive()
+    bot.run(token)
+has_run = True
