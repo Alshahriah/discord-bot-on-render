@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 from webserver import keep_alive
+load_dotenv()
 
 bot = commands.Bot(command_prefix='!', description='A bot that does stuff.', intents=discord.Intents.all())
 token = os.getenv('DISCORD_TOKEN')
