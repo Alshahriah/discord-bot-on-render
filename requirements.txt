@@ -1,4 +1,4 @@
 discord.py==2.1.0
-fastapi[all]
+flask
 python-dotenv==0.21.0
 jishaku
